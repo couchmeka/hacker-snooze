@@ -4,13 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Snooze</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Navigation for the page -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Tech News 2022</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             
+                <li class="nav-item">
+              </li>
 
-    
+             
+                <!-- dropdowlist items -->
 
+            </ul>
+            <form id="searchForm" class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+      <!-- double cards -->
+      <h1> Top Stories</h1>
+      <div class="row">
+<!-- card one -->
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 id="titleOne" class="card-title">Top Story</h5>
+             
+              <button id="buttonOne" class="btn btn-primary">Story</button>
+            </div>
+          </div>
+        </div>
+
+<!-- card two -->
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 id ="titleTwo" class="card-title">Top Story</h5>
+             
+              <button id="buttonTwo" class="btn btn-primary">Story</button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- card three -->
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 id="titleThree" class="card-title">Top Story</h5>
+               
+                <button id="buttonThree" class="btn btn-primary">Story</button>
+              </div>
+            </div>
+          </div>
+  
+  <!-- card four -->
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 id ="titleFour" class="card-title">Top Story</h5>
+               
+                <button id="buttonFour" class="btn btn-primary">Story</button>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+
+
+
+
+      <!-- news list -->
+      <div>
+          <ul id = "newslist">
+
+
+
+          </ul>
+
+
+
+
+      </div>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>

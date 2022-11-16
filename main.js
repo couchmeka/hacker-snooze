@@ -20,10 +20,10 @@ let hackerNews = async () => {
         let ul = document.querySelector('#newslist');
         let li = document.createElement('li');
         let a = document.createElement('a');
-        li.innerText = `${storyDetails.title} by ${storyDetails.by} ${storyDetails.url}`;
+        li.innerText = `${storyDetails.title} by ${storyDetails.by} `;
         ul.appendChild(li);
         li.appendChild(a)
-        let linkText = document.createTextNode("Full Story");
+        let linkText = document.createTextNode(`${storyDetails.url}`);
         a.appendChild(linkText);
         a.href = `${storyDetails.url}`
         console.log('done')

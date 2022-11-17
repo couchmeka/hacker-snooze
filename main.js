@@ -90,6 +90,8 @@ let hackerNews = async () => {
      
       })
 
+     
+
       //button event listener
       buttonOne.addEventListener('click', () => {
 
@@ -226,11 +228,11 @@ buttonView2.addEventListener('click', (event) => {
       let buttonView4 = document.querySelector('#buttonView4')
 
      //button View 4 
-     buttonView3.addEventListener('click', (event) => {
+     buttonView4.addEventListener('click', (event) => {
 
         event.preventDefault()
         let hackerView4 = async () => {
-            let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[2]}.json?print=pretty`);
+            let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[3]}.json?print=pretty`);
             let dataComment = await responseComment.json();
     
             let hackerViewInternal4 = async () => {
@@ -266,6 +268,8 @@ buttonView2.addEventListener('click', (event) => {
 
     
     };
+
+    //comment counts
     
     let hackerComments1 = async () => {
         let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[0]}.json?print=pretty`);

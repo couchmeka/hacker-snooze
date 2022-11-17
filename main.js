@@ -24,7 +24,7 @@ let hackerNews = async () => {
         
 
     //string interpolation for display items in list and adding link to a
-        li.innerText = `${storyDetails.title} by ${storyDetails.by} `;
+        li.innerText = `${storyDetails.title} - by ${storyDetails.by} `;
         let linkText = document.createTextNode(`${storyDetails.url}`);
         a.appendChild(linkText);
         a.href = `${storyDetails.url}`
@@ -81,6 +81,8 @@ let hackerNews = async () => {
             comment1.innerText = ` by ${newdataComment.by} [${newdataComment.text}]`
             console.log(newdataComment)
 
+           
+            
             
 
         };
@@ -89,6 +91,8 @@ let hackerNews = async () => {
      hackerView()
      
       })
+
+      
 
      
 
@@ -283,28 +287,28 @@ buttonView2.addEventListener('click', (event) => {
     let hackerComments2 = async () => {
         let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[1]}.json?print=pretty`);
         let dataComment = await responseComment.json();
-        let comment1 = document.querySelector('#comment2')
+        let comment2 = document.querySelector('#comment2')
 
 
-        comment1.innerText = `Comments: ${dataComment.kids.length}`
+        comment2.innerText = `Comments: ${dataComment.kids.length}`
     };
 
     let hackerComments3 = async () => {
         let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[2]}.json?print=pretty`);
         let dataComment = await responseComment.json();
-        let comment1 = document.querySelector('#comment3')
+        let comment3 = document.querySelector('#comment3')
 
 
-        comment1.innerText = `Comments: ${dataComment.kids.length}`
+        comment3.innerText = `Comments: ${dataComment.kids.length}`
     };
 
     let hackerComments4 = async () => {
         let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[3]}.json?print=pretty`);
         let dataComment = await responseComment.json();
-        let comment1 = document.querySelector('#comment4')
+        let comment4 = document.querySelector('#comment4')
 
 
-        comment1.innerText = `Comments: ${dataComment.kids.length}`
+        comment4.innerText = `Comments: ${dataComment.kids.length}`
     };
 
 

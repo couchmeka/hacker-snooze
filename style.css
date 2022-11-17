@@ -44,3 +44,24 @@ ul{
 }
 
 
+#headerimg {
+
+    display: flex;
+    height: 350px;
+    width: 1000px;
+}
+
+#search{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 400px){
+     
+    .row {
+        flex-direction: column;
+    }
+
+}

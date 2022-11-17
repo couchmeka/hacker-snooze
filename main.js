@@ -63,6 +63,32 @@ let hackerNews = async () => {
      //query selectors Event Listeners
       let titleOne = document.querySelector('#titleOne');
       let buttonOne = document.querySelector('#buttonOne');
+      let buttonView1 = document.querySelector('#buttonView1')
+
+      //button view event listener
+      buttonView1.addEventListener('click', (event) => {
+
+        event.preventDefault()
+        let hackerView = async () => {
+            let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[0]}.json?print=pretty`);
+            let dataComment = await responseComment.json();
+
+            let hackerViewInternal = async () => {
+                let responseCommentInternal = await fetch(`https://hacker-news.firebaseio.com/v0/item/${dataComment.kids[0]}.json?print=pretty`);
+                let newdataComment = await responseCommentInternal.json();
+            
+            let comment1 = document.querySelector('#comment1')
+            comment1.innerText = ` by ${newdataComment.by} [${newdataComment.text}]`
+            console.log(newdataComment)
+
+            
+
+        };
+        hackerViewInternal()
+    }
+     hackerView()
+     
+      })
 
       //button event listener
       buttonOne.addEventListener('click', () => {
@@ -88,6 +114,37 @@ let hackerNews = async () => {
       //query selectors Event Listeners
       let titleTwo = document.querySelector('#titleTwo');
       let buttonTwo = document.querySelector('#buttonTwo');
+      let buttonView2 = document.querySelector('#buttonView2')
+
+//button view event listener
+
+buttonView2.addEventListener('click', (event) => {
+
+    event.preventDefault()
+    let hackerView2 = async () => {
+        let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[1]}.json?print=pretty`);
+        let dataComment = await responseComment.json();
+
+        let hackerViewInternal2 = async () => {
+            let responseCommentInternal = await fetch(`https://hacker-news.firebaseio.com/v0/item/${dataComment.kids[0]}.json?print=pretty`);
+            let newdataComment = await responseCommentInternal.json();
+        
+        let comment2 = document.querySelector('#comment2')
+        comment2.innerText = ` by ${newdataComment.by} [${newdataComment.text}]`
+        console.log(newdataComment)
+
+        
+
+    };
+    hackerViewInternal2()
+}
+ hackerView2()
+ 
+  })
+
+
+
+
 
       //button event listener
       buttonTwo.addEventListener('click', () => {
@@ -113,6 +170,33 @@ let hackerNews = async () => {
       //query selectors Event Listeners
       let titleThree = document.querySelector('#titleThree');
       let buttonThree = document.querySelector('#buttonThree');
+      let buttonView3 = document.querySelector('#buttonView3')
+
+      //comments view
+      buttonView3.addEventListener('click', (event) => {
+
+        event.preventDefault()
+        let hackerView3 = async () => {
+            let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[2]}.json?print=pretty`);
+            let dataComment = await responseComment.json();
+    
+            let hackerViewInternal3 = async () => {
+                let responseCommentInternal = await fetch(`https://hacker-news.firebaseio.com/v0/item/${dataComment.kids[0]}.json?print=pretty`);
+                let newdataComment = await responseCommentInternal.json();
+            
+            let comment3 = document.querySelector('#comment3')
+            comment3.innerText = ` by ${newdataComment.by} [${newdataComment.text}]`
+            console.log(newdataComment)
+    
+            
+    
+        };
+        hackerViewInternal3()
+    }
+     hackerView3()
+     
+      })
+
 
       //button event listener
       buttonThree.addEventListener('click', () => {
@@ -139,6 +223,34 @@ let hackerNews = async () => {
       //query selectors Event Listeners
       let titleFour = document.querySelector('#titleFour');
       let buttonFour = document.querySelector('#buttonFour');
+      let buttonView4 = document.querySelector('#buttonView4')
+
+     //button View 4 
+     buttonView3.addEventListener('click', (event) => {
+
+        event.preventDefault()
+        let hackerView4 = async () => {
+            let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[2]}.json?print=pretty`);
+            let dataComment = await responseComment.json();
+    
+            let hackerViewInternal4 = async () => {
+                let responseCommentInternal = await fetch(`https://hacker-news.firebaseio.com/v0/item/${dataComment.kids[0]}.json?print=pretty`);
+                let newdataComment = await responseCommentInternal.json();
+            
+            let comment4 = document.querySelector('#comment4')
+            comment4.innerText = ` by ${newdataComment.by} [${newdataComment.text}]`
+            console.log(newdataComment)
+    
+            
+    
+        };
+        hackerViewInternal4()
+    }
+     hackerView4()
+     
+      })
+
+
 
       //button event listener
       buttonFour.addEventListener('click', () => {
@@ -192,7 +304,7 @@ let hackerNews = async () => {
     };
 
 
-
+    
 
 
 

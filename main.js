@@ -338,20 +338,6 @@ hackerNews()
 //++++++++++++++End News Population++++++++++++++++++
 
 
-//+++++++++++++Populate Comment Count
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //+++++++++++++++Search function ++++++++++++++++++++
 
@@ -373,7 +359,7 @@ hackerNews()
                 console.log('found')
              }
             else {
-                ul[i].remove()
+                ul[i].style.display="none";
                 console.log('not found') 
                  }
 

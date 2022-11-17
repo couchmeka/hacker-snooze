@@ -63,5 +63,9 @@ ul{
     .row {
         flex-direction: column;
     }
+    .card-header {
 
+        background-color: rgb(61, 61, 191);
+        color: azure;
+    }
 }

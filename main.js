@@ -6,37 +6,50 @@ let hackerNews = async () => {
     let response = await fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty');
     let data = await response.json();
     console.log(data)
-
-//for loop for adding stories to bottom of the page
+    //for loop for adding stories to bottom of the page
     for (let i = 0; i < data.length; i++) {
         
         
         let hackerFetch = async () => {
             let responseStory = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[i]}.json?print=pretty`);
             let storyDetails = await responseStory.json();
-            console.log(storyDetails)
+            
             
 
         let ul = document.querySelector('#newslist');
+    // create LI for list items and a for link reference
         let li = document.createElement('li');
         let a = document.createElement('a');
+    //comment variable    
+        
+
+    //string interpolation for display items in list and adding link to a
         li.innerText = `${storyDetails.title} by ${storyDetails.by} `;
-        ul.appendChild(li);
-        li.appendChild(a)
         let linkText = document.createTextNode(`${storyDetails.url}`);
         a.appendChild(linkText);
         a.href = `${storyDetails.url}`
-        console.log('done')
+
+    //appending list item to UL and to LI
+        ul.appendChild(li);
+        li.appendChild(a)
 
 
-    };
 
+//form for search
+        // let form = document.querySelector('#searchForm')
+
+
+
+
+     }
 
     hackerFetch()
+
+    
     
     }
 
-
+    
    //for loop for adding to cards 
    
         
@@ -67,7 +80,7 @@ let hackerNews = async () => {
     };
 
     let hackerFetch2 = async () => {
-        //api response
+       //api response
         let responseStory1 = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[1]}.json?print=pretty`);
         let details = await responseStory1.json();
         console.log(details)
@@ -128,7 +141,7 @@ let hackerNews = async () => {
       let buttonFour = document.querySelector('#buttonFour');
 
       //button event listener
-      buttonThree.addEventListener('click', () => {
+      buttonFour.addEventListener('click', () => {
 
         window.open(`${details.url}`)
         console.log('click')
@@ -141,10 +154,52 @@ let hackerNews = async () => {
 
     
     };
+    
+    let hackerComments1 = async () => {
+        let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[0]}.json?print=pretty`);
+        let dataComment = await responseComment.json();
+        let comment1 = document.querySelector('#comment1')
+
+
+        comment1.innerText = `Comments: ${dataComment.kids.length}`
+    };
+
+    let hackerComments2 = async () => {
+        let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[1]}.json?print=pretty`);
+        let dataComment = await responseComment.json();
+        let comment1 = document.querySelector('#comment2')
+
+
+        comment1.innerText = `Comments: ${dataComment.kids.length}`
+    };
+
+    let hackerComments3 = async () => {
+        let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[2]}.json?print=pretty`);
+        let dataComment = await responseComment.json();
+        let comment1 = document.querySelector('#comment3')
+
+
+        comment1.innerText = `Comments: ${dataComment.kids.length}`
+    };
+
+    let hackerComments4 = async () => {
+        let responseComment = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[3]}.json?print=pretty`);
+        let dataComment = await responseComment.json();
+        let comment1 = document.querySelector('#comment4')
+
+
+        comment1.innerText = `Comments: ${dataComment.kids.length}`
+    };
 
 
 
 
+
+
+   hackerComments1()
+   hackerComments2()
+   hackerComments3() 
+   hackerComments4()    
 
 
     hackerFetch1()
@@ -163,12 +218,47 @@ hackerNews()
 //++++++++++++++End News Population++++++++++++++++++
 
 
+//+++++++++++++Populate Comment Count
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //+++++++++++++++Search function ++++++++++++++++++++
-let form = document.querySelector('searchForm')
 
-let handleSearch = function(event) {
-// to be implemented
-}
+        //search function
+        const input = document.querySelector('input[type="search"]');
+        
+        input.addEventListener('search', (event) => {
+            event.preventDefault()
+
+            ul = document.querySelectorAll('#newslist li');
+            console.log(`The term searched for was ${input.value}`);
+            
+
+            for (let i = 0; i < ul.length; i++) { 
+                ul[i].innerText.toLowerCase();  
+             if (ul[i].innerText.includes(input.value)) 
+             {
+    
+                console.log('found')
+             }
+            else {
+                ul[i].remove()
+                console.log('not found') 
+                 }
 
 
-form.addEventListener('submit',handleSearch);
+           }
+
+
+        })

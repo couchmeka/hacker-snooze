@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="120">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -12,7 +13,7 @@
 <!-- Navigation for the page -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Tech News 2022</a>
+          <a id="navTitle" class="navbar-brand" href="#">Tech News 2022</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -26,10 +27,7 @@
                 <!-- dropdowlist items -->
 
             </ul>
-            <form id="searchForm" class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           </div>
         </div>
       </nav>
@@ -43,10 +41,11 @@
 <!-- card one -->
         <div class="col-sm-6">
           <div class="card">
+            <h5 class="card-header">#1 Headline Story</h5>
             <div class="card-body">
-              <h5 id="titleOne" class="card-title">Top Story</h5>
-             
+              <h5 id="titleOne" class="card-title">Top Story 1</h5>
               <button id="buttonOne" class="btn btn-primary">Story</button>
+              <h5 id ="comment1"></h5>
             </div>
           </div>
         </div>
@@ -54,10 +53,11 @@
 <!-- card two -->
         <div class="col-sm-6">
           <div class="card">
+            <h5 class="card-header">#2 Headline Story</h5>
             <div class="card-body">
-              <h5 id ="titleTwo" class="card-title">Top Story</h5>
-             
+              <h5 id ="titleTwo" class="card-title">Top Story 2</h5>             
               <button id="buttonTwo" class="btn btn-primary">Story</button>
+              <h5 id ="comment2"></h5>
             </div>
           </div>
         </div>
@@ -66,10 +66,11 @@
         <!-- card three -->
         <div class="col-sm-6">
             <div class="card">
+                <h5 class="card-header">#3 Headline Story</h5>
               <div class="card-body">
-                <h5 id="titleThree" class="card-title">Top Story</h5>
-               
+                <h5 id="titleThree" class="card-title">Top Story 3</h5>            
                 <button id="buttonThree" class="btn btn-primary">Story</button>
+                <h5 id ="comment3"></h5>
               </div>
             </div>
           </div>
@@ -77,10 +78,11 @@
   <!-- card four -->
           <div class="col-sm-6">
             <div class="card">
+                <h5 class="card-header">#4 Headline Story</h5>
               <div class="card-body">
-                <h5 id ="titleFour" class="card-title">Top Story</h5>
-               
+                <h5 id ="titleFour" class="card-title">Top Story 4</h5>           
                 <button id="buttonFour" class="btn btn-primary">Story</button>
+                <h5 id ="comment4"></h5>
               </div>
             </div>
           </div>
@@ -89,11 +91,9 @@
 
 
 
-
-
       <!-- news list -->
       <div>
-          <ul id = "newslist">
+          <ul id = "newslist" class="newsDoc">
 
 
 
@@ -109,6 +109,8 @@
     <script src="main.js"></script>
 </body>
 </html>
+
+
 
 <!-- Footer -->
 <footer class="page-footer font-small blue pt-4">
@@ -128,7 +130,7 @@
   
         </div>
        
-  
+
 
   
   </footer>
